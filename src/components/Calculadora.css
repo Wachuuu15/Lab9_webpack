@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: none;
+}
+
+body {
+  background-color: #1d2055;
+  display: grid;
+  place-content: center;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  font-size: 2rem;
+}
+
+.Calculator-base {
+  height: 80vh;
+  width: 50vh;
+  background-color: #956a7e;
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(39, 18, 41, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(49, 33, 49, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(48, 32, 47, 0.75);
+}
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.screen {
+  grid-column: 1 / -1;
+  color: white;
+  text-align: right;
+  padding: 0.5rem;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.screen.error {
+  background-color: red;
+}
+
+.btn {
+  display: grid;
+  place-content: center;
+  background-color: rgb(67, 41, 68);
+  border-radius: 50%;
+  color: #c79484;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color:#bc9dbb;
+}
+
+.light-gray {
+  background-color:#bc9dbb;
+  color: black;
+}
+
+.light-gray:hover {
+  background-color: #9f8eae;
+}
+
+.orange {
+  background-color: #4d2b41;
+}
+
+.orange:hover {
+  background-color: #c1bba0;
+  color: #956a7e;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+  border-radius: 25px;
+  place-content: unset;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 1000px){ /*Pantalla IPhone 12*/
+  .Calculator-base {
+    height: 60vh;
+    width: 40vh;
+    background-color:#956a7e;
+    border-radius: 1rem;
+    padding: 1rem;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  }
+}
